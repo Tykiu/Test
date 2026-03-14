@@ -9,3 +9,7 @@ app.include_router(chat.router)
 app.include_router(studybuddy.router)
 app.include_router(tutor.router)
 app.include_router(notifications.router)
+
+@app.get("/")
+def root():
+    return {"message": "Study Buddy API đang chạy!"}
